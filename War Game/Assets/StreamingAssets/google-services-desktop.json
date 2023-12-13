@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "205291300858",
+    "project_id": "dlc-store-assignment",
+    "storage_bucket": "dlc-store-assignment.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:205291300858:android:b0805a22d85e807d912643",
+        "android_client_info": {
+          "package_name": "com.google.firebase.store"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqRVNApYf0c6jdb56ku_61QrAq4gcUODE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

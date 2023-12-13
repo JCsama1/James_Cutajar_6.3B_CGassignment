@@ -10,6 +10,18 @@
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 
+# Firebase specific
+Assets/Firebase/
+Assets/Plugins/Firebase/
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Firebase generated files (specific to your Firebase project)
+google-services.json
+GoogleService-Info.plist
+
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
@@ -70,3 +82,7 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Firebase Authentication
+War Game/Assets/Firebase/
+War Game/Library/PackageCache/
