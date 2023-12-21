@@ -426,6 +426,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0f7ed674b250b947b080f5dc7ff1c29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ThumbnailPrefab: {fileID: 1397621648431556395, guid: 4169fd7e3fb886a4eb31f7ed3a9f2d12, type: 3}
+  instantiatedPrefabs: []
+  buySpecialEffect: {fileID: 0}
 --- !u!114 &688920740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -962,7 +965,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -30}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -80, y: -140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2081342843

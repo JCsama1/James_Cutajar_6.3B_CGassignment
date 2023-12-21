@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<assets>
+    <asset>
+        <itemId>0</itemId>
+        <itemDescription>Background 1</itemDescription>
+        <previewImageUrl>
+            <url>gs://dlc-store-assignment.appspot.com/images/3137resize.jpg</url>
+        </previewImageUrl>
+        <backgroundImageUrl>
+            <url>gs://dlc-store-assignment.appspot.com/images/3137.jpg</url>
+        </backgroundImageUrl>
+        <itemPrice>
+            <value>300</value>
+        </itemPrice>
+    </asset>
+    <asset>
+        <itemId>1</itemId>
+        <itemDescription>Background 2</itemDescription>
+        <previewImageUrl>
+            <url>gs://dlc-store-assignment.appspot.com/images/58469resize.jpg</url>
+        </previewImageUrl>
+        <backgroundImageUrl>
+            <url>gs://dlc-store-assignment.appspot.com/images/58469.jpg</url>
+        </backgroundImageUrl>
+        <itemPrice>
+            <value>350</value>
+        </itemPrice>
+    </asset>
+    <asset>
+        <itemId>2</itemId>
+        <itemDescription>Background 3</itemDescription>
+        <previewImageUrl>
+            <url>gs://dlc-store-assignment.appspot.com/images/58471resize.jpg</url>
+        </previewImageUrl>
+        <backgroundImageUrl>
+            <url>gs://dlc-store-assignment.appspot.com/images/58471.jpg</url>
+        </backgroundImageUrl>
+        <itemPrice>
+            <value>400</value>
+        </itemPrice>
+    </asset>
+</assets>

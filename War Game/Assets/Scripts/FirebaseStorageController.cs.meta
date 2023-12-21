@@ -3,7 +3,9 @@ guid: e0f7ed674b250b947b080f5dc7ff1c29
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - ThumbnailPrefab: {instanceID: 0}
+  - buySpecialEffect: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
