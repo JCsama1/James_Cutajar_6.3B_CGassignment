@@ -665,8 +665,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 311, y: 207.14}
-  m_SizeDelta: {x: 262.4339, y: 41.0809}
+  m_AnchoredPosition: {x: 355, y: 212.28}
+  m_SizeDelta: {x: 186.2468, y: 30.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1759591581
 MonoBehaviour:
@@ -688,7 +688,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Emoji Coins: 1000'
+  m_text: 'Coins: 1000'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -802,7 +802,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -350, y: 207.13998}
+  m_AnchoredPosition: {x: -351.76, y: 212.28}
   m_SizeDelta: {x: -748, y: -480}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1895298443
