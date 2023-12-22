@@ -5,53 +5,45 @@ using UnityEngine;
 public class AssetData
 {
     private string _itemId;
-    private string _name;
-    private string _thumbnailUrl;
-    private int _price;
-    private bool _owned;
-    
-    public AssetData(string itemId, string name, string thumbnailUrl,
-        int price, bool owned)
+    private string _itemDescription;
+    private string _previewImageUrl;
+    private float _itemPrice;
+
+    public AssetData(string itemId, string itemDescription, string previewImageUrl, float itemPrice)
     {
-        ID = itemId;
-        Name = name;
-        ThumbnailUrl = thumbnailUrl;
-        Price = price;
+        ItemId = itemId;
+        ItemDescription = itemDescription;
+        PreviewImageUrl = previewImageUrl;
+        ItemPrice = itemPrice;
     }
-    
-    public string ID
+
+    public string ItemId
     {
         get => _itemId;
         set => _itemId = value;
     }
-    
-    public string Name
+
+    public string ItemDescription
     {
-        get => _name;
-        set => _name = value;
-    }
-    
-    public string ThumbnailUrl
-    {
-        get => _thumbnailUrl;
-        set => _thumbnailUrl = value;
-    }
-    
-    public int Price
-    {
-        get => _price;
-        set => _price = value;
+        get => _itemDescription;
+        set => _itemDescription = value;
     }
 
-    public bool Owned
+    public string PreviewImageUrl
     {
-        get => _owned;
-        set => _owned = value;
+        get => _previewImageUrl;
+        set => _previewImageUrl = value;
     }
-    
+
+    public float ItemPrice
+    {
+        get => _itemPrice;
+        set => _itemPrice = value;
+    }
+
     public override string ToString()
     {
-        return ($"Asset with itemId:{ID} name:{Name} thumbnail url:{ThumbnailUrl} " +
-                $"price:{Price} owned:{Owned}");
+        return $"Asset with itemId: {ItemId}, description: {ItemDescription}, " +
+               $"previewUrl: {PreviewImageUrl}, price: {ItemPrice}";
     }
 }
