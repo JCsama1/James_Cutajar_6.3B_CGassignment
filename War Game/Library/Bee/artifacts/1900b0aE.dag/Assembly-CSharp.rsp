@@ -390,6 +390,7 @@
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/GameManagerEditor.cs"
 "Assets/Scripts/PlayingCardsSO.cs"
+"Assets/Scripts/WalletManager.cs"
 -langversion:9.0
 
 /deterministic

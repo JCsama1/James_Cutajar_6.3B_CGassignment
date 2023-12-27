@@ -103,7 +103,7 @@ public class FirebaseStorageController : MonoBehaviour
     }
 
     IEnumerator LoadImageContainer(byte[] byteArr, AssetData assetRef)
-    {
+{
         Texture2D imageTex = new Texture2D(1, 1);
         imageTex.LoadImage(byteArr);
         //Instantiate a new prefab
@@ -113,10 +113,31 @@ public class FirebaseStorageController : MonoBehaviour
         thumbnailPrefab.name = "Thumbnail_" + instantiatedPrefabs.Count;
         //Load the image to that prefab
         thumbnailPrefab.transform.GetChild(0).GetComponent<RawImage>().texture = imageTex;
-        thumbnailPrefab.transform.GetChild(1).GetComponent<TMP_Text>().text = assetRef.ItemDescription;
-        thumbnailPrefab.transform.GetChild(2).GetComponent<TMP_Text>().text = assetRef.ItemPrice + " Coins"; 
+    thumbnailPrefab.transform.GetChild(1).GetComponent<TMP_Text>().text = assetRef.ItemDescription;
+    thumbnailPrefab.transform.GetChild(2).GetComponent<TMP_Text>().text = assetRef.ItemPrice + " Coins";
 
-        instantiatedPrefabs.Add(thumbnailPrefab);
-        yield return null;
+    // Add a click event to the Buy_Button
+    Button buyButton = thumbnailPrefab.transform.GetChild(3).GetComponent<Button>();
+    buyButton.onClick.AddListener(() => BuyButtonClicked(assetRef));
+
+    instantiatedPrefabs.Add(thumbnailPrefab);
+    yield return null;
+}
+
+    private void BuyButtonClicked(AssetData asset)
+{
+    if (WalletManager.Instance.Coins >= asset.ItemPrice)
+    {
+        // Deduct coins from the wallet
+        WalletManager.Instance.Coins -= (int)asset.ItemPrice;
+
+        // Perform the logic to permanently unlock the item
+        // You may want to save the purchased items to PlayerPrefs or another storage mechanism
     }
+    else
+    {
+        // Display a message to the player indicating insufficient funds
+        Debug.Log("Insufficient funds to purchase this item.");
+    }
+}
 }
