@@ -388,7 +388,6 @@
 "Assets/Scripts/AssetData.cs"
 "Assets/Scripts/FirebaseStorageController.cs"
 "Assets/Scripts/GameManager.cs"
-"Assets/Scripts/GameManagerEditor.cs"
 "Assets/Scripts/PlayingCardsSO.cs"
 "Assets/Scripts/WalletManager.cs"
 -langversion:9.0
