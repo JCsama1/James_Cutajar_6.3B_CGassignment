@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - BuyButton
     - FirebaseStorageController
     - GameManager
     - PlayingCardsSO
@@ -94,7 +95,10 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
     - UnityEngine.UI.Navigation
     - UnityEngine.UI.SpriteState
-  methodsToPreserve: []
+  methodsToPreserve:
+  - assembly: Assembly-CSharp
+    fullTypeName: BuyButton
+    methodName: OnBuyButtonClick
   sceneClasses:
     Assets/Scenes/GameScene.unity:
     - Class: 1
@@ -130,7 +134,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 22008}
     - Class: 114
-      Script: {instanceID: 22412}
+      Script: {instanceID: 22410}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -181,7 +185,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 22008}
     - Class: 114
-      Script: {instanceID: 22412}
+      Script: {instanceID: 22410}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -234,11 +238,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 22008}
     - Class: 114
-      Script: {instanceID: 22412}
+      Script: {instanceID: 22410}
     - Class: 114
-      Script: {instanceID: 22816}
+      Script: {instanceID: 22814}
     - Class: 114
-      Script: {instanceID: 24790}
+      Script: {instanceID: 24788}
+    - Class: 114
+      Script: {instanceID: 28006}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -246,10 +252,6 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
-      Script: {instanceID: 0}
-    - Class: 198
-      Script: {instanceID: 0}
-    - Class: 199
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -311,7 +313,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 22008}
     - Class: 114
-      Script: {instanceID: 22412}
+      Script: {instanceID: 22410}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1069,7 +1071,7 @@ ScriptsOnlyBuild:
     className: FirebaseMonoBehaviour
   - hash:
       serializedVersion: 2
-      Hash: 401a1855a9bcd6d12db06e4971e3f904
+      Hash: 1a0a3b7852920ce5e96297fe0bb4309d
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: WalletManager
@@ -1343,10 +1345,16 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: FirebaseStorageController
+  - hash:
+      serializedVersion: 2
+      Hash: 1e4429eb578973445a0eb040ed635c2b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: BuyButton
   platform: 19
   scenePathNames:
   - Assets/Scenes/WelcomeScene.unity
   - Assets/Scenes/StoreScene.unity
   - Assets/Scenes/GameScene.unity
   - Assets/Scenes/ScoreScene.unity
-  playerPath: C:/Users/James/Desktop/New folder/War Game.exe
+  playerPath: C:/James_Cutajar_6.3B_CGassignment/War Game.exe

@@ -3,49 +3,48 @@ using TMPro;
 
 public class WalletManager : MonoBehaviour
 {
-    private int coins;
-    public TMP_Text coinsLabel; // Reference to the Coins_Label TextMeshPro
-
     public static WalletManager Instance;
 
-    public int Coins
+    [SerializeField] private TMP_Text coinsText;
+    private int coins;
+
+    private void Awake()
     {
-        get { return coins; }
-        set
+        if (Instance != null && Instance != this)
         {
-            coins = value;
-            PlayerPrefs.SetInt("Coins", coins);
-            //UpdateUI(); // Call a method to update the UI with the new wallet amount
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(this.gameObject);
         }
     }
 
-    private void Awake()
-{
-    Debug.Log("WalletManager Awake");
-
-    if (Instance == null)
+    private void Start()
     {
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-
-        // Initialize coins from PlayerPrefs or set a default value
-        coins = PlayerPrefs.GetInt("Coins", 1000);
-
-        // Update the UI on awake
-        UpdateUI();
-
-        Debug.Log("WalletManager initialized with coins: " + coins);
+        // Initialize coins from PlayerPrefs or set default value
+        coins = PlayerPrefs.GetInt("PlayerCoins", 1000);
+        UpdateCoinsText();
     }
-}
 
-    private void UpdateUI()
-{
-    Debug.Log("Updating UI with coins: " + coins);
-    
-    // Update the UI to display the current wallet amount
-    if (coinsLabel != null)
+    public void UpdateCoinsText()
     {
-        coinsLabel.text = "Coins: " + coins.ToString();
+        coinsText.text = "Coins: " + coins;
     }
-}
+
+    // Add the DeductCoins method to subtract coins
+    public bool DeductCoins(int amount)
+    {
+        if (coins >= amount)
+        {
+            coins -= amount;
+            UpdateCoinsText();
+            return true; // Deduction successful
+        }
+        else
+        {
+            return false; // Insufficient funds
+        }
+    }
 }
