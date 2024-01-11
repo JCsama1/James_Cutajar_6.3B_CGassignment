@@ -33,18 +33,17 @@ public class WalletManager : MonoBehaviour
         coinsText.text = "Coins: " + coins;
     }
 
-    // Add the DeductCoins method to subtract coins
     public bool DeductCoins(int amount)
     {
         if (coins >= amount)
         {
             coins -= amount;
             UpdateCoinsText();
-            return true; // Deduction successful
+            return true;
         }
         else
         {
-            return false; // Insufficient funds
+            return false; 
         }
     }
 }

@@ -33,7 +33,7 @@ public class FirebaseStorageController : MonoBehaviour
         {
             Instance = this;
         }
-        DontDestroyOnLoad(this); // GameManager
+        DontDestroyOnLoad(this); 
         _firebaseInstance = FirebaseStorage.DefaultInstance;
     }
 
@@ -48,10 +48,7 @@ public class FirebaseStorageController : MonoBehaviour
         // Display default coins in the top right corner
         DisplayPlayerWallet();
 
-        // First download manifest.txt
         DownloadFileAsync("gs://dlc-store-assignment.appspot.com/manifest.xml", DownloadType.Manifest);
-        // Get the urls inside the manifest file
-        // Download each url and display to the user
     }
 
     private void DisplayPlayerWallet()
@@ -64,26 +61,22 @@ public class FirebaseStorageController : MonoBehaviour
     {
         StorageReference storageRef = _firebaseInstance.GetReferenceFromUrl(url);
 
-        // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
         const long maxAllowedSize = 1 * 1024 * 1024 * 4;
         storageRef.GetBytesAsync(maxAllowedSize).ContinueWithOnMainThread(task =>
         {
             if (task.IsFaulted || task.IsCanceled)
             {
                 Debug.LogException(task.Exception);
-                // Uh-oh, an error occurred!
             }
             else
             {
                 Debug.Log($"{storageRef.Name} finished downloading!");
                 if (filetype == DownloadType.Manifest)
                 {
-                    // Load manifest
                     StartCoroutine(LoadManifest(task.Result));
                 }
                 else if (filetype == DownloadType.Thumbnail)
                 {
-                    // Load the image into Unity
                     StartCoroutine(LoadImageContainer(task.Result, assetRef));
                 }
             }

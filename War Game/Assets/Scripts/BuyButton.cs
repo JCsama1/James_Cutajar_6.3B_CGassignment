@@ -22,7 +22,6 @@ public class BuyButton : MonoBehaviour
         if (WalletManager.Instance.DeductCoins((int)assetData.ItemPrice))
         {
             // Player has enough coins, unlock the item
-            // You can add your unlock logic here
             Debug.Log("Item purchased: " + assetData.ItemDescription);
 
             // Save purchase information to Firebase Realtime Database
