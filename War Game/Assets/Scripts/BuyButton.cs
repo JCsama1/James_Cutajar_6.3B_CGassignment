@@ -35,7 +35,7 @@ public class BuyButton : MonoBehaviour
 
     private void SavePurchaseToDatabase(string itemId, string itemDescription)
 {
-    // Get a reference to your Firebase Realtime Database
+    // Get a reference to Firebase Realtime Database
     DatabaseReference databaseReference = FirebaseDatabase.DefaultInstance.RootReference;
 
     // Generate a random unique player ID
@@ -45,10 +45,8 @@ public class BuyButton : MonoBehaviour
     string date = System.DateTime.Now.ToString("yyyy-MM-dd");
     string time = System.DateTime.Now.ToString("HH:mm:ss");
 
-    // Create a PurchaseData object
     PurchaseData purchaseData = new PurchaseData(playerId, itemDescription, date, time);
 
-    // Convert the PurchaseData object to JSON
     string json = JsonUtility.ToJson(purchaseData);
 
     // Save the JSON data to the database under a unique key

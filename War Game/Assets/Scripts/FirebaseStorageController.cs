@@ -59,9 +59,11 @@ public class FirebaseStorageController : MonoBehaviour
 
     public void DownloadFileAsync(string url, DownloadType filetype, [Optional] AssetData assetRef)
     {
+        // Get a reference to the Firebase Storage based on the provided URL
         StorageReference storageRef = _firebaseInstance.GetReferenceFromUrl(url);
 
         const long maxAllowedSize = 1 * 1024 * 1024 * 4;
+        // Initiate an asynchronous download and handle the result on the main thread
         storageRef.GetBytesAsync(maxAllowedSize).ContinueWithOnMainThread(task =>
         {
             if (task.IsFaulted || task.IsCanceled)
@@ -85,7 +87,9 @@ public class FirebaseStorageController : MonoBehaviour
 
     IEnumerator LoadManifest(byte[] byteArr)
     {
+        // Parse the byte array into an XML document
         XDocument manifest = XDocument.Parse(System.Text.Encoding.UTF8.GetString(byteArr));
+        // Initialize a list to store AssetData objects
         DownloadedAssetData = new List<AssetData>();
 
         foreach (XElement assetElement in manifest.Root.Elements("asset"))
@@ -98,6 +102,7 @@ public class FirebaseStorageController : MonoBehaviour
 
             AssetData newAsset = new AssetData(itemId, itemDescription, previewImageUrl, price);
             DownloadedAssetData.Add(newAsset);
+            // Trigger an asynchronous download for the thumbnail image of the asset
             DownloadFileAsync(newAsset.PreviewImageUrl, DownloadType.Thumbnail, newAsset);
         }
 

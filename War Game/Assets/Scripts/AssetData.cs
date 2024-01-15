@@ -9,8 +9,10 @@ public class AssetData
     private string _previewImageUrl;
     private float _itemPrice;
 
+    // Constructor to initialize the asset data with provided values
     public AssetData(string itemId, string itemDescription, string previewImageUrl, float itemPrice)
     {
+        // Set the values for the asset data
         ItemId = itemId;
         ItemDescription = itemDescription;
         PreviewImageUrl = previewImageUrl;

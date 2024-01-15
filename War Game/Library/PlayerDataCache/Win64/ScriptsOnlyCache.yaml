@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - ButtonManager
     - BuyButton
     - FirebaseStorageController
     - GameManager
@@ -9,7 +10,6 @@ ScriptsOnlyBuild:
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Animation.Runtime.dll:
-    - UnityEngine.U2D.Animation.BufferManager
     - UnityEngine.U2D.Animation.SpriteSkinComposite
     - UnityEngine.U2D.Animation.SpriteSkinUpdateHelper
     Unity.2D.IK.Editor.dll:
@@ -19,7 +19,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.GridBrushEditor
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
@@ -128,13 +127,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 18550}
     - Class: 114
-      Script: {instanceID: 21084}
+      Script: {instanceID: 21088}
     - Class: 114
-      Script: {instanceID: 21794}
+      Script: {instanceID: 21798}
     - Class: 114
-      Script: {instanceID: 22008}
+      Script: {instanceID: 22014}
     - Class: 114
-      Script: {instanceID: 22410}
+      Script: {instanceID: 22416}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -179,13 +178,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 18550}
     - Class: 114
-      Script: {instanceID: 21084}
+      Script: {instanceID: 21088}
     - Class: 114
-      Script: {instanceID: 21794}
+      Script: {instanceID: 21798}
     - Class: 114
-      Script: {instanceID: 22008}
+      Script: {instanceID: 22014}
     - Class: 114
-      Script: {instanceID: 22410}
+      Script: {instanceID: 22416}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -230,21 +229,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 18550}
     - Class: 114
-      Script: {instanceID: 20656}
+      Script: {instanceID: 20658}
     - Class: 114
-      Script: {instanceID: 21084}
+      Script: {instanceID: 20768}
     - Class: 114
-      Script: {instanceID: 21794}
+      Script: {instanceID: 21088}
     - Class: 114
-      Script: {instanceID: 22008}
+      Script: {instanceID: 21798}
     - Class: 114
-      Script: {instanceID: 22410}
+      Script: {instanceID: 21836}
     - Class: 114
-      Script: {instanceID: 22814}
+      Script: {instanceID: 22014}
     - Class: 114
-      Script: {instanceID: 24788}
+      Script: {instanceID: 22416}
     - Class: 114
-      Script: {instanceID: 28006}
+      Script: {instanceID: 22820}
+    - Class: 114
+      Script: {instanceID: 24794}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -301,19 +302,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 18550}
     - Class: 114
-      Script: {instanceID: 19842}
+      Script: {instanceID: 19844}
     - Class: 114
-      Script: {instanceID: 20174}
+      Script: {instanceID: 20176}
     - Class: 114
-      Script: {instanceID: 20680}
+      Script: {instanceID: 20682}
     - Class: 114
-      Script: {instanceID: 21084}
+      Script: {instanceID: 21088}
     - Class: 114
-      Script: {instanceID: 21794}
+      Script: {instanceID: 21798}
     - Class: 114
-      Script: {instanceID: 22008}
+      Script: {instanceID: 22014}
     - Class: 114
-      Script: {instanceID: 22410}
+      Script: {instanceID: 22416}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -855,6 +856,12 @@ ScriptsOnlyBuild:
     className: UnityOnEndDragMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 1e4429eb578973445a0eb040ed635c2b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: BuyButton
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -985,6 +992,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: ec3a790c53c1682b83d135eab5e27af6
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ButtonManager
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1345,16 +1358,10 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: FirebaseStorageController
-  - hash:
-      serializedVersion: 2
-      Hash: 1e4429eb578973445a0eb040ed635c2b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: BuyButton
   platform: 19
   scenePathNames:
   - Assets/Scenes/WelcomeScene.unity
   - Assets/Scenes/StoreScene.unity
   - Assets/Scenes/GameScene.unity
   - Assets/Scenes/ScoreScene.unity
-  playerPath: C:/James_Cutajar_6.3B_CGassignment/War Game.exe
+  playerPath: C:/James_Cutajar_6.3B_CGassignment/build/War Game.exe

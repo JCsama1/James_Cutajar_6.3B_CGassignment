@@ -35,9 +35,12 @@ public class WalletManager : MonoBehaviour
 
     public bool DeductCoins(int amount)
     {
+        // Check if the player has enough coins to cover the deduction
         if (coins >= amount)
         {
+            // Deduct the specified amount from the player's coins
             coins -= amount;
+            // Update the displayed coins text in the UI
             UpdateCoinsText();
             return true;
         }
